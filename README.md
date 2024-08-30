@@ -11,13 +11,13 @@ humans.The seven basic emotions we're gonna classify are:
 * Contempt
 
 ## Dataset
-We used the extended cohn kanade (CK+) dataset which can be found [here](https://www.kaggle.com/shawon10/ckplus)
+I have used the extended cohn kanade (CK+) dataset which can be found [here](https://www.kaggle.com/shawon10/ckplus)
 
 ## Reference Paper
-The reference paper we used is [this](https://drive.google.com/file/d/1qMUhEFLUEuJlHO5SKjULNYfSS25ZSw4a/view) reasearch paper published on springer.
+The reference paper used is [this](https://drive.google.com/file/d/1qMUhEFLUEuJlHO5SKjULNYfSS25ZSw4a/view) reasearch paper published on springer.
 
 ## Preprocessing
-We performed the following preprocessing methods:
+Performed the following preprocessing methods:
 
 * [Face alignment](https://github.com/Av-hash/EmoRec/blob/master/FaceAlignment.ipynb)
 * [Face cropping](https://github.com/Av-hash/EmoRec/blob/master/FaceCropping.ipynb)
@@ -25,17 +25,17 @@ We performed the following preprocessing methods:
 * [Data augmentation](https://github.com/Av-hash/EmoRec/blob/master/DataAugmentation.ipynb)
 
 ## CNN model
-We will be making a Sequential [model](https://github.com/Av-hash/EmoRec/blob/master/CNNmodel.ipynb) comprising of using two convolutional layers (conv2D), two MaxPooling2D layers , a Flatten layer followed by a output Dense layer with softmax activation , with adam optimizer and categorical crossentropy loss.
+Will be making a Sequential [model](https://github.com/Av-hash/EmoRec/blob/master/CNNmodel.ipynb) comprising of using two convolutional layers (conv2D), two MaxPooling2D layers , a Flatten layer followed by a output Dense layer with softmax activation , with adam optimizer and categorical crossentropy loss.
 
 ## Evaluation
-We have evaluated our model on three different cropping methods:
+Evaluated the model on three different cropping methods:
 
 * Cropping with background
 * Cropping without background
 * Cropping without forehead
 
-Also we varied the neuron number of hidden dense layer as 0, 256, 512, 1024.
-And we performed a ten fold [cross validation](https://github.com/Av-hash/EmoRec/blob/master/CrossValidation.ipynb) on our model keeping the cropping method fixed (without background) but varying the neuron number.
+Also varied the neuron number of hidden dense layer as 0, 256, 512, 1024.
+And performed a ten fold [cross validation](https://github.com/Av-hash/EmoRec/blob/master/CrossValidation.ipynb) on the model keeping the cropping method fixed (without background) but varying the neuron number.
 
 ## Code
 The link to the whole assembled code is [here](https://github.com/Av-hash/EmoRec/blob/master/Facial_Expression_Recognition.ipynb).
@@ -44,7 +44,7 @@ The link to the whole assembled code is [here](https://github.com/Av-hash/EmoRec
 For running the model , just run the python script [facial_expression_recognition.py](https://github.com/Av-hash/EmoRec/blob/master/facial_expression_recognition.py)
 
 ## Results
-The results of various evaluation methods we used are illustrated in this table :
+The results of various evaluation methods used are illustrated in this table :
 
 ### Cropping without background
 
@@ -74,7 +74,7 @@ The results of various evaluation methods we used are illustrated in this table 
 |1024   |[Link](https://github.com/Av-hash/EmoRec/blob/master/images/FER%20acc%20graph%20with%201024%20neurons%20with%20background.jpg)   |[Link](https://github.com/Av-hash/EmoRec/blob/master/images/Confusion%20matrix%20with%201024%20neuron%20with%20background.jpg)   | 
 
 ### Cross Validation
-We have done a ten-fold cross validation on our dataset. Following the research paper , it was done with same cropping method (without background) but with different neuron numbers.
+Done a ten-fold cross validation on our dataset. Following the research paper , it was done with same cropping method (without background) but with different neuron numbers.
 
 |No. of neurons   |Accuracy  |      
 |---|---|
